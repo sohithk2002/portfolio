@@ -7,8 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import Lightbox from "react-image-lightbox";
 import "swiper/css";
-import "swiper/css/navigation";
-import "react-image-lightbox/style.css";
 
 const ProjectCard = ({ imgUrls = [], title, description, gitUrl, previewUrl, theme }) => {
   const [isExpanded, setIsExpanded] = useState(false);
