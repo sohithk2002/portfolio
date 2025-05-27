@@ -20,7 +20,7 @@ const projectsData = [
     "/images/projects/jobxpert/6.png",
     "/images/projects/jobxpert/7.png"
   ],
-  tag: ["All", "Web", "AI", "Cloud", "Data"],
+  tag: ["All", "Web", "AI", "Cloud", ],
   techStack: ["Next.js", "Gemini AI", "OpenAI", "Stripe", "Clerk", "WebSockets", "Inngest", "Neon"],
   gitUrl: "https://github.com/sohithk2002/jobXpert.git",
   previewUrl: "https://jobxpert.onrender.com/",
@@ -39,7 +39,7 @@ const projectsData = [
       "/images/projects/salarypredictor/4.png",
       "/images/projects/salarypredictor/5.png"
     ],
-    tag: ["All", "Web", "Data", "ML", "Analytics"],
+    tag: ["All", "Web", "Data",],
     gitUrl: "https://github.com/sohithk2002/salary_predictor.git",
     previewUrl: "https://salary-predictor-mqio.onrender.com/"
   },
@@ -57,7 +57,7 @@ const projectsData = [
     "/images/projects/splithack/6.png",
     "/images/projects/splithack/7.png"
   ],
-  tag: ["All", "Web", "AI", "Cloud", "Data"],
+  tag: ["All", "Web", "AI", "Cloud",],
   gitUrl: "https://github.com/sohithk2002/splithack.git",
   previewUrl: "https://splithack.onrender.com/expenses/new"
   },
@@ -74,30 +74,32 @@ const projectsData = [
       "/images/projects/portfolio/5.png"
     ],
     tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/"
+    gitUrl: "https://github.com/sohithk2002/portfolio.git",
+    previewUrl: "https://portfolio-dejq.onrender.com"
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description:
-      "A boilerplate React project with Firebase Auth and Firestore CRUD operations. Ideal for kickstarting full-stack projects with login and database.",
-    imgUrls: ["/images/projects/5.png"],
-    tag: ["All", "Web", "Cloud"],
-    gitUrl: "/",
-    previewUrl: "/"
+title: "FinGenius – AI Finance Tracker",
+description: `
+FinGenius is an AI-powered finance app that automates budgeting, expense tracking, and financial insights. Built with Next.js 15, React, and Tailwind CSS, it features Clerk-authenticated user flows, receipt scanning with Gemini AI, and interactive dashboards using Recharts. Automation is powered by Inngest (background jobs), with transactional emails via Resend. Backend runs on Prisma with a Neon PostgreSQL database, secured by Arcjet rate limiting and fingerprinting, and deployed on Render.
+`,
+imgUrls: [
+  "/images/projects/fingenius/logo1.png",
+  "/images/projects/fingenius/logo2.png",
+  "/images/projects/fingenius/logo3.png",
+  "/images/projects/fingenius/logo4.png",
+  "/images/projects/fingenius/logo5.png",
+  "/images/projects/fingenius/logo6.png",
+  "/images/projects/fingenius/logo7.png",
+  "/images/projects/fingenius/logo8.png",
+  "/images/projects/fingenius/logo9.png"
+],
+tag: ["All", "Web", "AI" ,"Cloud"],
+gitUrl: "https://github.com/sohithk2002/financeai",
+previewUrl: "https://fingenius.onrender.com"
   },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description:
-      "A visual and interactive roadmap for aspiring full-stack developers. Built with React, Markdown, and TailwindCSS.",
-    imgUrls: ["/images/projects/6.png"],
-    tag: ["All", "Web", "Data"],
-    gitUrl: "/",
-    previewUrl: "/"
-  }
 ];
+
 const ProjectsSection = ({ theme }) => {
   const [tag, setTag] = useState("All");
   const ref = useRef(null);

@@ -5,12 +5,17 @@ import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import Lightbox from "react-image-lightbox";
 import "swiper/css";
 import "swiper/css/navigation";
+import "react-image-lightbox/style.css";
 
 const ProjectCard = ({ imgUrls = [], title, description, gitUrl, previewUrl, theme }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const previewText = description.slice(0, 120); // Show 120 characters initially
+  const [isOpen, setIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
+
+  const previewText = description.slice(0, 120); // Short description preview
 
   return (
     <div>
@@ -22,17 +27,33 @@ const ProjectCard = ({ imgUrls = [], title, description, gitUrl, previewUrl, the
           navigation={true}
           modules={[Navigation]}
           allowTouchMove={imgUrls.length > 1}
+          onSlideChange={(swiper) => setPhotoIndex(swiper.activeIndex)}
         >
           {imgUrls.map((url, index) => (
             <SwiperSlide key={index}>
               <img
                 src={url}
                 alt={`${title} screenshot ${index + 1}`}
-                className="w-full h-52 md:h-72 object-cover rounded-t-xl"
+                className="w-full h-52 md:h-72 object-cover rounded-t-xl cursor-pointer"
+                onClick={() => setIsOpen(true)}
               />
             </SwiperSlide>
           ))}
         </Swiper>
+        {isOpen && (
+          <Lightbox
+            mainSrc={imgUrls[photoIndex]}
+            nextSrc={imgUrls[(photoIndex + 1) % imgUrls.length]}
+            prevSrc={imgUrls[(photoIndex + imgUrls.length - 1) % imgUrls.length]}
+            onCloseRequest={() => setIsOpen(false)}
+            onMovePrevRequest={() =>
+              setPhotoIndex((photoIndex + imgUrls.length - 1) % imgUrls.length)
+            }
+            onMoveNextRequest={() =>
+              setPhotoIndex((photoIndex + 1) % imgUrls.length)
+            }
+          />
+        )}
       </div>
 
       {/* Action buttons */}
@@ -65,7 +86,7 @@ const ProjectCard = ({ imgUrls = [], title, description, gitUrl, previewUrl, the
         </Link>
       </div>
 
-      {/* Title + description */}
+      {/* Title + Description */}
       <div
         className={`rounded-b-xl mt-3 py-6 px-4 ${
           theme === "dark" ? "bg-[#181818]" : "bg-gray-100"
