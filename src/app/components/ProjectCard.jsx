@@ -5,8 +5,10 @@ import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import Lightbox from "react-image-lightbox";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import "swiper/css";
+import "swiper/css/navigation";
 
 const ProjectCard = ({ imgUrls = [], title, description, gitUrl, previewUrl, theme }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -40,16 +42,11 @@ const ProjectCard = ({ imgUrls = [], title, description, gitUrl, previewUrl, the
         </Swiper>
         {isOpen && (
           <Lightbox
-            mainSrc={imgUrls[photoIndex]}
-            nextSrc={imgUrls[(photoIndex + 1) % imgUrls.length]}
-            prevSrc={imgUrls[(photoIndex + imgUrls.length - 1) % imgUrls.length]}
-            onCloseRequest={() => setIsOpen(false)}
-            onMovePrevRequest={() =>
-              setPhotoIndex((photoIndex + imgUrls.length - 1) % imgUrls.length)
-            }
-            onMoveNextRequest={() =>
-              setPhotoIndex((photoIndex + 1) % imgUrls.length)
-            }
+            open={isOpen}
+            close={() => setIsOpen(false)}
+            slides={imgUrls.map((url) => ({ src: url }))}
+            index={photoIndex}
+            on={{ view: ({ index }) => setPhotoIndex(index) }}
           />
         )}
       </div>
