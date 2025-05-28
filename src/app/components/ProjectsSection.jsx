@@ -124,12 +124,12 @@ A modern full-stack journaling application built using Next.js 15 (App Router), 
 The app includes dynamic routing for entries and collections, rate limiting and bot protection using Arcjet, and draft saving capabilities. Server actions power database queries and third-party API interactions. Built with a scalable folder structure and styled with utility-first principles.
   `,
   imgUrls: [
-    "/images/projects/journal-app/1.png",
-    "/images/projects/journal-app/2.png",
-    "/images/projects/journal-app/3.png",
-    "/images/projects/journal-app/4.png",
-    "/images/projects/journal-app/5.png",
-    "/images/projects/journal-app/6.png"
+    "/images/projects/journal/1.png",
+    "/images/projects/journal/2.png",
+    "/images/projects/journal/3.png",
+    "/images/projects/journal/4.png",
+    "/images/projects/journal/5.png",
+    "/images/projects/journal/6.png"
   ],
   tag: ["All", "Web", "Full-Stack", "AI", "Next.js"],
   gitUrl: "https://github.com/sohithk2002/Tracktide",
