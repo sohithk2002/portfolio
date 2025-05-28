@@ -98,6 +98,43 @@ tag: ["All", "Web", "AI" ,"Cloud"],
 gitUrl: "https://github.com/sohithk2002/financeai",
 previewUrl: "https://fingenius.onrender.com"
   },
+  {
+  id: 6,
+  title: "AI Summarizer – Chrome Extension (Gemini API)",
+  description: `
+A lightweight Chrome extension that summarizes webpage content using Google's Gemini API. Built with HTML, CSS, and JavaScript, it includes a popup interface, content script for DOM interaction, and secure API key storage via chrome.storage. It leverages chrome.runtime messaging and clipboard integration for one-click copy functionality. The project follows Chrome extension best practices and is packaged for the Chrome Web Store with full privacy justifications.
+  `,
+  imgUrls: [
+    "/images/projects/summarizer/1.png",
+    "/images/projects/summarizer/2.png",
+    "/images/projects/summarizer/3.png",
+    "/images/projects/summarizer/4.png",
+    "/images/projects/summarizer/5.png"
+  ],
+  tag: ["All", "Web", "AI", "Chrome"],
+  gitUrl: "https://github.com/sohithk2002/ai-summerizer-chrome-extension",
+  previewUrl: "https://chrome.google.com/webstore/detail/sohiths-ai-summarizer/<ehnclljgbeapoehcbcaffpfoakajlpoj>"
+},
+{
+  id: 7,
+  title: "Full-Stack Journal App – Next.js & Shadcn UI",
+  description: `
+A modern full-stack journaling application built using Next.js 15 (App Router), Tailwind CSS, and Shadcn UI. It features secure user authentication with Clerk, a NeonDB PostgreSQL database managed via Prisma ORM, and mood analytics visualized with Recharts. Users can create rich-text entries, organize them into collections, and monitor emotional trends over time.
+
+The app includes dynamic routing for entries and collections, rate limiting and bot protection using Arcjet, and draft saving capabilities. Server actions power database queries and third-party API interactions. Built with a scalable folder structure and styled with utility-first principles.
+  `,
+  imgUrls: [
+    "/images/projects/journal-app/1.png",
+    "/images/projects/journal-app/2.png",
+    "/images/projects/journal-app/3.png",
+    "/images/projects/journal-app/4.png",
+    "/images/projects/journal-app/5.png",
+    "/images/projects/journal-app/6.png"
+  ],
+  tag: ["All", "Web", "Full-Stack", "AI", "Next.js"],
+  gitUrl: "https://github.com/sohithk2002/Tracktide",
+  previewUrl: "https://tracktide.onrender.com"
+}
 ];
 
 const ProjectsSection = ({ theme }) => {
