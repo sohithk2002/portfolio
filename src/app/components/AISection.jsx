@@ -3,6 +3,8 @@
 import { useChat } from "ai/react";
 import { useState } from "react";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 export default function AISection() {
   const { isLoading, messages, input, handleInputChange, handleSubmit } = useChat();
@@ -16,15 +18,7 @@ export default function AISection() {
           onClick={() => setIsPopupOpen(!isPopupOpen)}
           className="bg-blue-500 hover:bg-blue-600 text-white rounded-full p-4 shadow-lg flex items-center justify-center relative group"
         >
-          {/* Icons8 Icon */}
-          <Image
-            src="/icons8-icon.png" // Replace with the path to your downloaded icon
-            alt="Chat Icon"
-            width={35}
-            height={35}
-            className="w-8 h-8"
-          />
-          {/* Tooltip */}
+          <Image src="/icons8-icon.png" alt="Chat Icon" width={35} height={35} className="w-8 h-8" />
           <span className="absolute -top-10 right-0 bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
             Ask me Anything
           </span>
@@ -34,11 +28,7 @@ export default function AISection() {
       {/* Popup Chat Section */}
       {isPopupOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40">
-          {/* Chat Container */}
-          <div
-  className="relative bg-black bg-opacity-90 rounded-lg shadow-lg flex flex-col w-[95vw] max-w-md h-[90vh] sm:w-[480px] sm:h-[600px]"
->
-
+          <div className="relative bg-black bg-opacity-90 rounded-lg shadow-lg flex flex-col w-[95vw] max-w-md h-[90vh] sm:w-[480px] sm:h-[600px]">
             {/* Close Button */}
             <button
               onClick={() => setIsPopupOpen(false)}
@@ -51,12 +41,7 @@ export default function AISection() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
 
@@ -66,18 +51,24 @@ export default function AISection() {
             </h1>
 
             {/* Chat Section */}
-            <section className="flex-1 overflow-y-auto p-4">
+            <section className="flex-1 overflow-y-auto p-4 space-y-2">
               {messages?.length > 0 ? (
                 messages.map((message, index) => (
                   <div
                     key={index}
-                    className={`rounded-3xl m-2 p-2 px-4 w-[70%] md:w-[80%] mt-4 text-gray-200 ${
+                    className={`rounded-3xl p-3 px-4 w-[70%] md:w-[80%] text-sm whitespace-pre-wrap ${
                       message.role === "user"
-                        ? "rounded-br-none bg-blue-500 ml-auto"
-                        : "rounded-bl-none bg-orange-700"
+                        ? "bg-blue-500 text-white rounded-br-none ml-auto"
+                        : "bg-orange-700 text-white rounded-bl-none"
                     }`}
                   >
-                    <b>{message.role === "user" ? "User:" : "Sohith:"}</b> {message.content}
+                    <b>{message.role === "user" ? "User:" : "Sohith:"}</b>
+                    <ReactMarkdown
+                      className="prose prose-invert prose-sm mt-2"
+                      remarkPlugins={[remarkGfm]}
+                    >
+                      {message.content}
+                    </ReactMarkdown>
                   </div>
                 ))
               ) : (
