@@ -5,7 +5,7 @@ import Script from 'next/script'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Sohith Kampalli | Full-Stack & Cloud Engineer',
+  title: 'View my portfolio',
   description:
     'Explore Sohith’s AI-powered full-stack portfolio. Built with Next.js, Prisma, Clerk, OpenAI, AWS, and GCP for scalable cloud-native applications.',
   openGraph: {
