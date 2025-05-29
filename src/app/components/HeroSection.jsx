@@ -37,7 +37,7 @@ const HeroSection = ({ theme }) => {
             />
           </h1>
           <p className={`text-base sm:text-lg mb-6 lg:text-xl ${theme === "dark" ? "text-[#ADB7BE]" : "text-gray-700"}`}>
-            Full-Stack & Cloud Engineer building AI-integrated, scalable web applications using Next.js, Node.js, Prisma, AWS, and OpenAI/Gemini APIs. Skilled in deploying cloud-native systems with CI/CD, Docker, and Kubernetes, with a strong focus on automation, performance, and real-world AI use cases.
+            AI-Driven Full-Stack & Cloud Engineer with proven experience building scalable, data-intensive applications using React.js, Next.js, Node.js, and Prisma. Skilled in integrating OpenAI/Gemini APIs for intelligent features, automating data pipelines with Pandas and PostgreSQL, and deploying production systems on AWS, GCP, and Render. Experienced with CI/CD pipelines, Docker/Kubernetes, and serverless computing. Passionate about transforming raw data into actionable insights through modern data engineering practices and cloud-native architecture.
           </p>
           <div>
             <Link

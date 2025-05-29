@@ -131,7 +131,8 @@ const AboutSection = ({ theme }) => {
             About Me
           </h2>
           <p className={`text-base lg:text-lg ${theme === "dark" ? "text-[#ADB7BE]" : "text-gray-700"}`}>
-            I&apos;m a Full-Stack & Cloud Engineer with deep experience in building scalable web and AI-integrated apps using Next.js, Node.js, Prisma, and cloud platforms like AWS & GCP. I’ve engineered high-performance APIs, AI career tools, financial analytics dashboards, and automated pipelines using Docker, Kubernetes, and Jenkins. Passionate about transforming ideas into impact with cloud-native architectures, real-time systems, and secure, user-friendly solutions.
+            I’m Sohith — a Full-Stack & Cloud Engineer who blends <strong>AI integration, scalable backend systems, and cloud-native automation</strong> into real-world solutions. I’ve engineered apps that write resumes, summarize content, analyze job markets, and manage finances using <strong>React.js, Next.js, Prisma, PostgreSQL</strong>, and cloud tools like <strong>AWS, GCP, and Render</strong>.<br /><br />
+  Skilled in building real-time, secure applications with <strong>OpenAI, Gemini, Inngest</strong> and deploying them with <strong>Docker, Kubernetes, and CI/CD pipelines</strong>. I don’t just build for scale — I build for impact.
           </p>
           <div className="flex flex-row justify-start mt-8 flex-wrap gap-2">
             {TAB_DATA.map((tabItem) => (

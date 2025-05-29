@@ -65,7 +65,7 @@ const EmailSection = ({ theme }) => {
           <Link href="https://twitter.com/sohithk2002">
             <Image src="/twitter-icon.svg" alt="Twitter Icon" width={24} height={24} />
           </Link>
-          <Link href="https://www.instagram.com/sohithk2002">
+          <Link href="https://www.instagram.com/k_sohithchowdary/">
             <Image src="/instagram-icon.svg" alt="Instagram Icon" width={24} height={24} />
           </Link>
         </div>
