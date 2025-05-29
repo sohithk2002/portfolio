@@ -9,7 +9,7 @@ export const metadata = {
   description:
     'Explore Sohith’s AI-powered full-stack portfolio. Built with Next.js, Prisma, Clerk, OpenAI, AWS, and GCP for scalable cloud-native applications.',
   openGraph: {
-    title: 'Sohith Kampalli | Full-Stack & Cloud Engineer',
+    title: 'View my portfolio',
     description:
       'Explore Sohith’s AI-powered full-stack portfolio. Built with Next.js, Prisma, Clerk, OpenAI, AWS, and GCP for scalable cloud-native applications.',
     url: 'https://portfolio-dejq.onrender.com', // replace with your domain
