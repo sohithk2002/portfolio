@@ -34,7 +34,7 @@ const EmailSection = ({ theme }) => {
     const resData = await response.json();
 
     if (response.status === 200) {
-      console.log("Message sent.");
+      console.log("Message sent to sohith kampalli");
       setEmailSubmitted(true);
     }
   };
