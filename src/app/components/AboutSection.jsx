@@ -5,65 +5,77 @@ import Image from "next/image";
 import TabButton from "./TabButton";
 
 // Keep your existing FA icons for HTML/CSS
-import { FaHtml5, FaCss3Alt, FaAws, FaMicrosoft, FaDatabase } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaAws, FaMicrosoft, FaDatabase, FaWindows, FaServer } from "react-icons/fa";
 
 // Keep these Simple-Icons that are known-good in react-icons
 import {
-  SiAngular,
+  SiOpenai,
+  SiGoogle,
+  SiAnthropic,
+  SiHuggingface,
+  SiNextdotjs,
   SiReact,
+  SiNodedotjs,
+  SiPython,
+  SiTypescript,
+  SiJavascript,
+  SiPostgresql,
+  SiMongodb,
+  SiGooglecloud,
   SiDocker,
   SiKubernetes,
-  SiGithub,
-  SiGit,
   SiJenkins,
-  SiMysql,
-  SiMongodb,
-  SiPostgresql,
+  SiGit,
+  SiGithub,
   SiPostman,
-  SiSwagger,
-  SiJavascript,
-  SiTypescript,
+  SiSwagger
 } from "react-icons/si";
 
 // Use Tabler fallbacks for the ones failing in your build
-import { TbBrandCSharp, TbBrandAzure } from "react-icons/tb";
 
 // Lightweight dot placeholder for ".NET" (you can keep this or swap to any icon you like)
 import { LiaDotCircle } from "react-icons/lia";
 
 const SkillsGrid = () => (
   <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
-    {/* Languages / Frameworks */}
-    <div className="flex flex-col items-center"><TbBrandCSharp className="text-4xl mb-2" /><span>C#</span></div>
-    <div className="flex flex-col items-center"><LiaDotCircle className="text-4xl mb-2" /><span>.NET / Core</span></div>
-    <div className="flex flex-col items-center"><SiAngular className="text-4xl mb-2" /><span>Angular</span></div>
-    <div className="flex flex-col items-center"><SiReact className="text-4xl mb-2" /><span>React.js</span></div>
-    <div className="flex flex-col items-center"><SiJavascript className="text-4xl mb-2" /><span>JavaScript</span></div>
+
+    {/* 🤖 AI & Automation */}
+    <div className="flex flex-col items-center"><SiOpenai className="text-4xl mb-2" /><span>OpenAI / GPT</span></div>
+    <div className="flex flex-col items-center"><SiGoogle className="text-4xl mb-2" /><span>Gemini</span></div>
+    <div className="flex flex-col items-center"><SiAnthropic className="text-4xl mb-2" /><span>Claude</span></div>
+    <div className="flex flex-col items-center"><SiHuggingface className="text-4xl mb-2" /><span>Hugging Face</span></div>
+
+    {/* 💻 Full-Stack */}
+    <div className="flex flex-col items-center"><SiNextdotjs className="text-4xl mb-2" /><span>Next.js</span></div>
+    <div className="flex flex-col items-center"><SiReact className="text-4xl mb-2" /><span>React</span></div>
+    <div className="flex flex-col items-center"><SiNodedotjs className="text-4xl mb-2" /><span>Node.js</span></div>
+    <div className="flex flex-col items-center"><SiPython className="text-4xl mb-2" /><span>Python</span></div>
     <div className="flex flex-col items-center"><SiTypescript className="text-4xl mb-2" /><span>TypeScript</span></div>
-    <div className="flex flex-col items-center"><FaHtml5 className="text-4xl mb-2" /><span>HTML5</span></div>
-    <div className="flex flex-col items-center"><FaCss3Alt className="text-4xl mb-2" /><span>CSS3</span></div>
+    <div className="flex flex-col items-center"><SiJavascript className="text-4xl mb-2" /><span>JavaScript</span></div>
 
-    {/* Databases */}
-    <div className="flex flex-col items-center"><FaDatabase className="text-4xl mb-2" /><span>SQL Server</span></div>
-    <div className="flex flex-col items-center"><SiMysql className="text-4xl mb-2" /><span>MySQL</span></div>
-    <div className="flex flex-col items-center"><SiMongodb className="text-4xl mb-2" /><span>MongoDB</span></div>
+    {/* 🗄️ Databases */}
     <div className="flex flex-col items-center"><SiPostgresql className="text-4xl mb-2" /><span>PostgreSQL</span></div>
+    <div className="flex flex-col items-center"><SiMongodb className="text-4xl mb-2" /><span>MongoDB</span></div>
+    <div className="flex flex-col items-center"><FaDatabase className="text-4xl mb-2" /><span>SQL</span></div>
 
-    {/* Cloud / DevOps */}
-    <div className="flex flex-col items-center"><TbBrandAzure className="text-4xl mb-2" /><span>Azure</span></div>
+    {/* ☁️ Cloud & DevOps */}
     <div className="flex flex-col items-center"><FaAws className="text-4xl mb-2" /><span>AWS</span></div>
-    <div className="flex flex-col items-center"><FaMicrosoft className="text-4xl mb-2" /><span>Azure DevOps</span></div>
-
+    <div className="flex flex-col items-center"><SiGooglecloud className="text-4xl mb-2" /><span>GCP</span></div>
     <div className="flex flex-col items-center"><SiDocker className="text-4xl mb-2" /><span>Docker</span></div>
-    <div className="flex flex-col items-center"><SiKubernetes className="text-4xl mb-2" /><span>Kubernetes (AKS)</span></div>
-    <div className="flex flex-col items-center"><SiJenkins className="text-4xl mb-2" /><span>Jenkins</span></div>
+    <div className="flex flex-col items-center"><SiKubernetes className="text-4xl mb-2" /><span>Kubernetes</span></div>
+    <div className="flex flex-col items-center"><SiJenkins className="text-4xl mb-2" /><span>CI/CD</span></div>
 
-    {/* Tools */}
+    {/* 🏢 Enterprise (Your Job Strength) */}
+    <div className="flex flex-col items-center"><FaMicrosoft className="text-4xl mb-2" /><span>Entra ID</span></div>
+    <div className="flex flex-col items-center"><FaWindows className="text-4xl mb-2" /><span>Active Directory</span></div>
+    <div className="flex flex-col items-center"><FaServer className="text-4xl mb-2" /><span>Intune / SCCM</span></div>
+
+    {/* 🛠️ Tools */}
     <div className="flex flex-col items-center"><SiGit className="text-4xl mb-2" /><span>Git</span></div>
     <div className="flex flex-col items-center"><SiGithub className="text-4xl mb-2" /><span>GitHub</span></div>
     <div className="flex flex-col items-center"><SiPostman className="text-4xl mb-2" /><span>Postman</span></div>
     <div className="flex flex-col items-center"><SiSwagger className="text-4xl mb-2" /><span>Swagger</span></div>
-    <div className="flex flex-col items-center"><FaMicrosoft className="text-4xl mb-2" /><span>Visual Studio</span></div>
+
   </div>
 );
 
@@ -95,9 +107,7 @@ const TAB_DATA = [
         <li>AWS Certified Data Engineer – Associate</li>
         <li>AWS Certified Developer – Associate</li>
         <li>Google Data Analytics Professional Certificate (v2)</li>
-        <li>Microsoft Certified: Azure Developer Associate (AZ-204)</li>
-        <li>Microsoft 365 Developer Associate (MS-600)</li>
-        <li>Microsoft Certified: DevOps Engineer Expert (AZ-400)</li>
+    
       </ul>
     ),
   },
@@ -107,30 +117,59 @@ const TAB_DATA = [
     content: (
       <div className="space-y-8">
         <div>
-          <h3 className="text-xl font-semibold">Full Stack .NET Developer — Doublene, USA</h3>
-          <p className="text-sm opacity-70 mb-1">Oct 2024 – Present</p>
+          <h3 className="text-xl font-semibold">
+            IT Systems Engineer — Endpoint & Identity Management — 22nd Century Technologies (Dallas County)
+          </h3>
+          <p className="text-sm opacity-70 mb-1">Jul 2025 – Present</p>
           <ul className="list-disc ml-5 text-sm leading-6">
-            <li>Architected and implemented enterprise-grade web applications with ASP.NET Core, C#, Angular, and React, improving user experience and reducing page load times by <strong>30%</strong>.</li>
-            <li>Built and optimized RESTful APIs and integrated legacy SOAP services for secure data exchange, improving system communication efficiency by <strong>25%</strong>.</li>
-            <li>Deployed and scaled applications on AWS and Azure; leveraged CI/CD (Azure DevOps, Jenkins) to cut release cycles by <strong>40%</strong> and reduce downtime by <strong>25%</strong>.</li>
-            <li>Monitored and optimized performance with Azure Application Insights, Azure Monitor, and ELK; proactively detected issues and reduced downtime by <strong>15%</strong>.</li>
-            <li>Designed responsive UI/UX with HTML5, CSS3, Bootstrap, boosting cross-platform compatibility and mobile session engagement.</li>
-            <li>Implemented microservices with Docker and Kubernetes (AKS), improving scalability and modularity by <strong>20%</strong>.</li>
-            <li>Partnered with BAs, QA, and PMs to gather requirements and define scope, achieving a <strong>95% on-time</strong> project completion rate.</li>
+            <li>
+              Provide onsite and remote support across multiple government departments, resolving complex hardware, software, networking, and access issues.
+            </li>
+            <li>
+              Manage identity and access operations using <strong>Microsoft Entra ID (Azure AD)</strong> and on-premises Active Directory, including account provisioning, MFA enforcement, and authentication troubleshooting.
+            </li>
+            <li>
+              Configure and support enterprise endpoints using <strong>Microsoft Intune</strong> and <strong>SCCM</strong>, including imaging, patching, compliance policies, and application deployment.
+            </li>
+            <li>
+              Support secure connectivity solutions including VPN access, domain-joined infrastructure, and enterprise security controls.
+            </li>
+            <li>
+              Monitor and secure distributed assets using endpoint management tools, ensuring compliance with organizational policies.
+            </li>
+            <li>
+              Assist users working with enterprise platforms including SAP ERP, Snowflake, and service management systems (Ivanti Heat).
+            </li>
+            <li>
+              Analyze incident trends and system logs to identify recurring issues and improve service reliability.
+            </li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-xl font-semibold">.NET Developer — Techecy, India</h3>
-          <p className="text-sm opacity-70 mb-1">Jan 2021 – Jul 2023</p>
+          <h3 className="text-xl font-semibold">
+            Software Engineer Intern — Techecy Consultancy & Solutions
+          </h3>
+          <p className="text-sm opacity-70 mb-1">Aug 2022 – Jun 2023</p>
           <ul className="list-disc ml-5 text-sm leading-6">
-            <li>Led Agile ceremonies (stand-ups, sprint planning) across cross-functional teams; delivered <strong>5</strong> major features ahead of schedule.</li>
-            <li>Optimized database performance using Entity Framework and ADO.NET, reducing query latency by <strong>25%</strong> and improving responsiveness.</li>
-            <li>Executed unit, integration, and load testing with NUnit and automation; achieved <strong>90%</strong> code coverage and cut production defects by <strong>35%</strong>.</li>
-            <li>Designed and integrated SQL Server, MySQL, and MongoDB; improved query response times by <strong>15%</strong>.</li>
-            <li>Automated deployments with CI/CD (Azure DevOps, Jenkins), accelerating release cycles by <strong>40%</strong> and reducing manual errors.</li>
-            <li>Implemented secure auth with OAuth2.0, JWT, and Identity Server; enforced OWASP Top 10 compliance.</li>
-            <li>Managed version control with GitHub and Azure Repos, reducing merge conflicts by <strong>30%</strong>.</li>
+            <li>
+              Contributed to full-stack development in an Agile environment, building secure web applications using modern frameworks and databases.
+            </li>
+            <li>
+              Implemented authentication and authorization using OAuth 2.0 and JWT following security best practices.
+            </li>
+            <li>
+              Designed and integrated SQL and NoSQL databases (SQL Server, MySQL, MongoDB) to support application functionality.
+            </li>
+            <li>
+              Supported CI/CD pipelines using Azure DevOps and Jenkins to streamline releases and improve deployment efficiency.
+            </li>
+            <li>
+              Performed automated testing and debugging to improve reliability and reduce production issues.
+            </li>
+            <li>
+              Collaborated with cross-functional teams during sprint planning and development cycles to deliver project milestones.
+            </li>
           </ul>
         </div>
       </div>
@@ -155,13 +194,14 @@ const AboutSection = ({ theme }) => {
             About Me
           </h2>
 
-          {/* Professional Summary aligned to your resume */}
-          <p className={`text-base lg:text-lg ${theme === "dark" ? "text-[#ADB7BE]" : "text-gray-700"}`}>
-            Full Stack <strong>.NET Developer (4+ years)</strong> specializing in enterprise-grade web apps using <strong>.NET Core, C#, Angular, and React</strong>.
-            Known for improving application performance by <strong>30%</strong>, reducing downtime by <strong>25%</strong>, and delivering secure, cloud-native solutions on <strong>Azure</strong> and <strong>AWS</strong>.
-            Skilled in <strong>microservices architecture</strong>, <strong>CI/CD automation</strong>, and <strong>database optimization</strong> (SQL Server, MySQL, MongoDB).
-            Microsoft- and AWS-certified with strong <strong>Agile/TDD</strong> expertise—consistently driving faster delivery and better user experience.
-          </p>
+         {/* Professional Summary aligned to your resume */}
+<p className={`text-base lg:text-lg ${theme === "dark" ? "text-[#ADB7BE]" : "text-gray-700"}`}>
+  AI & Full-Stack <strong>Product Engineer</strong> specializing in building intelligent automation systems and scalable web applications using <strong>Next.js, React, Node.js, and Python</strong>.
+  Known for developing real-world AI solutions including an autonomous browser agent capable of executing complex tasks across websites using natural language.
+  Experienced in integrating modern AI models (<strong>GPT, Gemini, Claude</strong>) and delivering secure, cloud-native platforms on <strong>AWS</strong> and modern infrastructure.
+  Skilled in <strong>AI agents</strong>, <strong>automation workflows</strong>, <strong>microservices architecture</strong>, and <strong>end-to-end product development</strong> (PostgreSQL, MongoDB, SQL).
+  AWS-certified with enterprise experience in identity management, endpoint systems, and secure infrastructure—consistently building solutions that improve efficiency and user experience.
+</p>
 
           <div className="flex flex-row justify-start mt-8 flex-wrap gap-2">
             {TAB_DATA.map((tabItem) => (

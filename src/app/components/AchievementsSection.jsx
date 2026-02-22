@@ -4,10 +4,10 @@ import React from "react";
 import CountUp from "react-countup";
 
 const achievementsList = [
-  { metric: "Full-Stack & Data Projects", value: "10+" },
-  { metric: "Users Reached Across Deployments", value: "5000+" },
-  { metric: "Clients & Stakeholders Served", value: "15+" },
-  { metric: "Years of Coding Experience", value: 5 },
+  { metric: "AI & Full-Stack Projects Built", value: "10+" },
+  { metric: "Early Users Across AI Products", value: "200+" },
+  { metric: "Enterprise Environments Supported", value: "Multiple" },
+  { metric: "Years of Coding Experience", value: "4+" },
 ];
 
 const AchievementsSection = ({ theme }) => {

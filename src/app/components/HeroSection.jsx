@@ -28,11 +28,12 @@ const HeroSection = ({ theme }) => {
             <TypeAnimation
               sequence={[
                 "Sohith Kampalli", 1100,
-                "Full Stack .NET Developer", 1100,
-                ".NET Core & C#", 1100,
-                "Angular & React", 1100,
-                "Azure & AWS", 1100,
-                "Microservices • CI/CD", 1100,
+"AI & Full-Stack Product Engineer", 1100,
+"Autonomous Agents & Automation", 1100,
+"Next.js • React • Python", 1100,
+"GPT • Gemini • Claude", 1100,
+"AWS • GCP • Cloud Systems", 1100,
+"Building Real-World AI Products", 1100,
               ]}
               wrapper="span"
               speed={10}
@@ -46,13 +47,7 @@ const HeroSection = ({ theme }) => {
               theme === "dark" ? "text-[#ADB7BE]" : "text-gray-700"
             }`}
           >
-            Full Stack <strong>.NET Developer (4+ years)</strong> specializing in
-            building enterprise-grade web applications with <strong>.NET Core, C#, Angular, and React</strong>. Known for
-            improving application performance by <strong>30%</strong>, reducing downtime by <strong>25%</strong>, and delivering
-            secure, cloud-native solutions on <strong>Azure</strong> and <strong>AWS</strong>. Skilled in <strong>microservices
-            architecture</strong>, <strong>CI/CD automation</strong>, and <strong>database optimization</strong> (SQL Server,
-            MySQL, MongoDB). Microsoft- and AWS-certified professional with strong <strong>Agile/TDD</strong> expertise,
-            consistently driving faster delivery and enhanced user experience.
+            AI & Full-Stack <strong>Product Engineer</strong> specializing in building intelligent automation systems and scalable web applications using <strong>Next.js, React, Node.js, Python, and cloud-native technologies</strong>. Known for developing real-world AI solutions including an autonomous browser agent capable of executing complex tasks across websites using natural language. Experienced in integrating modern AI models (<strong>GPT, Gemini, Claude</strong>) and delivering secure, production-ready platforms on <strong>AWS</strong>, <strong>GCP</strong>, and modern cloud infrastructure. Skilled in <strong>AI agents</strong>, <strong>automation workflows</strong>, <strong>microservices architecture</strong>, and <strong>end-to-end product development</strong> across full stack systems (PostgreSQL, MongoDB, SQL). Certified in AWS and cloud technologies, with enterprise experience in identity management, endpoint systems, and secure infrastructure, consistently building solutions that improve efficiency, reliability, and user experience.
           </p>
 
           <div className="flex flex-col sm:flex-row sm:justify-start justify-center gap-4">
